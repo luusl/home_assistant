@@ -1,0 +1,1121 @@
+modbus:
+  - name: pluggit
+    type: tcp
+    host: host.docker.internal
+    port: 502
+    sensors:
+      - name: pluggit_components_raw
+        unique_id: f14c15e1-ae90-4e7e-a5ba-ab98a345a81b
+        address: 2
+        data_type: uint16
+        swap: byte
+      - name: pluggit_unit_type_raw
+        unique_id: cf2d4c24-6d98-4c70-bfc2-e12cc063f274
+        address: 3
+        data_type: uint16
+        swap: byte
+      - name: pluggit_system_serial_number
+        unique_id: 6d06b86b-79ac-4a04-b949-f2cd8a415b06
+        address: 4
+        data_type: uint64
+        swap: word
+      - name: pluggit_system_name
+        unique_id: a99fcbc3-6a2a-460e-bbaa-b5a014355f68
+        address: 8
+        count: 16
+        data_type: string
+        swap: byte
+      - name: pluggit_fw_version_raw
+        unique_id: 4cd05099-b0fd-4b59-b169-2d7adac04e5a
+        address: 24
+        data_type: uint32
+        swap: word
+      - name: pluggit_dhcp_enable
+        unique_id: d6136f1e-db42-4c9b-a9fc-64af0d8f55e5
+        address: 26
+        data_type: uint32
+        swap: word
+      - name: pluggit_ip_address_raw
+        unique_id: 7458dcb8-ec56-43b6-9707-ca1db7bd83f9
+        address: 28
+        data_type: uint32
+        swap: word
+      - name: pluggit_ip_mask_raw
+        unique_id: 9800c6d1-93fc-4f03-be1a-354fd8178e4d
+        address: 32
+        data_type: uint32
+        swap: word
+      - name: pluggit_gateway_raw
+        unique_id: ea29fc5d-b767-4272-abd8-90a66d1eca74
+        address: 36
+        data_type: uint32
+        swap: word
+      - name: pluggit_mac_address_raw
+        unique_id: 728338c4-8006-422c-9ce3-90bea979dc30
+        address: 40
+        data_type: uint64
+        swap: byte
+      - name: pluggit_preheater_power_state_raw
+        unique_id: 58e169dc-214c-4239-8be4-a0734c12f5e0
+        address: 76
+        data_type: uint32
+        swap: word
+      - name: pluggit_switch_in_b_position
+        unique_id: 1b9794d6-a52a-4bf4-aeae-0538cda51c59
+        address: 84
+        data_type: uint16
+        swap: word
+      - name: pluggit_switch_in_a_position
+        unique_id: a299be7f-b341-402b-9b7f-d4bbb06604bd
+        address: 86
+        data_type: uint16
+        swap: word
+      - name: pluggit_fan1
+        unique_id: 269560eb-15de-48ca-a464-8f1fdb01d6dc
+        address: 100
+        data_type: float32
+        swap: word
+        unit_of_measurement: "rpm"
+      - name: pluggit_fan2
+        unique_id: 588acd09-7070-4b7f-a0c3-8c7042722bf0
+        address: 102
+        data_type: float32
+        swap: word
+        unit_of_measurement: "rpm"
+      - name: pluggit_current_date_time_raw
+        unique_id: 0d080373-4fc7-4a6d-b928-faeb0d8a98f4
+        address: 108
+        data_type: uint32
+        swap: word
+#      - name: pluggit_new_date_time
+#        unique_id: 83d4bb4d-66cf-4eb2-8e51-ea6ab0ee4e37
+#        address: 110
+#        data_type: uint32
+#        swap: word
+      - name: pluggit_t1
+        unique_id: c6775e4c-36a7-424e-ae1a-51152810c43d
+        address: 132
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_t2
+        unique_id: 2353c516-4931-4a51-96d1-b42ddbd38d03
+        address: 134
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_t3
+        unique_id: fa9e1ead-233c-4ee5-b96c-0b80a8f2cccf
+        address: 136
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_t4
+        unique_id: e9a47514-004b-4bed-a890-2abc38690074
+        address: 138
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_t5
+        unique_id: 3388f642-8aab-4181-abc2-8c15d1933a9b
+        address: 140
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_power_of_preheater
+        unique_id: 3aeeb340-68e2-4f8e-ba68-3f7f585be1be
+        address: 160
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "%"
+      - name: pluggit_active_unit_mode_raw
+        unique_id: 57fa4107-2c4e-4139-8fa4-c61aa1960842
+        address: 168
+        data_type: uint32
+        swap: word
+      - name: pluggit_hac1_fw_version_raw
+        unique_id: c8229e56-0d02-433f-a182-12823fd08401
+        address: 192
+        data_type: uint32
+        swap: word
+      - name: pluggit_period_of_the_air_filter_using
+        unique_id: 3e490d4a-2e3f-4b37-8255-9ed239983060
+        address: 194
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "months"
+      - name: pluggit_value_of_rh_sensor
+        unique_id: cccda7d2-7605-4646-a847-a698a71e8d1c
+        address: 196
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "%"
+      - name: pluggit_bypass_state_raw
+        unique_id: 9f02798a-a204-4ed7-9225-e8f6f43b9e7a
+        address: 198
+        data_type: uint32
+        swap: word
+      - name: pluggit_list_of_the_hac1_components_raw
+        unique_id: 306b7b40-cd57-4e37-966d-763c5c096404
+        address: 244
+        data_type: uint32
+        swap: word
+      - name: pluggit_manual_bypass_duration
+        unique_id: 1fd4881c-afe2-4702-9a4d-345f06b6a3aa
+        address: 264
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "minutes"
+      - name: pluggit_list_of_the_hac1_active_components_raw
+        unique_id: a82bf83c-a666-4c11-9487-768457e42a51
+        address: 300
+        data_type: uint32
+        swap: word
+      - name: pluggit_speed_level_of_fans_in_manual_mode_raw
+        unique_id: 37a7460f-9db3-4230-b6b3-58a2552ca49e
+        address: 324
+        data_type: uint32
+        swap: word
+      - name: pluggit_night_mode_start_hour
+        unique_id: 69ca1c3e-a09e-4e98-a632-6830347d9dd4
+        address: 332
+        data_type: uint32
+        swap: word
+      - name: pluggit_night_mode_start_minute
+        unique_id: 97423e17-6875-46a7-866f-3b707f944403
+        address: 334
+        data_type: uint32
+        swap: word
+      - name: pluggit_night_mode_end_hour
+        unique_id: 6b194cde-082e-4be6-8012-8abc3cdd8b84
+        address: 336
+        data_type: uint32
+        swap: word
+      - name: pluggit_night_mode_end_minute
+        unique_id: 850202ea-d17f-4ff0-8c0f-09e1e62c5cf7
+        address: 338
+        data_type: uint32
+        swap: word
+      - name: pluggit_setpoint_of_rh
+        unique_id: 49a1c999-5a9b-42ba-92d6-cc490885c552
+        address: 340
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "%"
+      - name: pluggit_setpoint_of_the_t2
+        unique_id: 64cf3a5b-ceed-4a76-a531-5155fd0b017b
+        address: 344
+        data_type: int32
+        swap: word
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_setpoint_of_the_t3
+        unique_id: 912985a6-b9f0-4702-8a00-fb2ad3b625a9
+        address: 346
+        data_type: int32
+        swap: word
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_setpoint_of_the_t5
+        unique_id: 14eb5c07-ea29-4333-b03a-0de8ba369918
+        address: 348
+        data_type: int32
+        swap: word
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_list_of_the_hac1_enabled_components_raw
+        unique_id: fe60cb8a-c3f7-46f3-a027-38a30f56ad1d
+        address: 402
+        data_type: uint32
+        swap: word
+      - name: pluggit_voc_sensor_value
+        unique_id: 5fcd1976-3804-4a71-a617-d353124e5a35
+        address: 430
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_minimum_temperature_of_bypass_openning
+        unique_id: 6723b60e-313c-49bc-a9bd-4459ff90b8dd
+        address: 444
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_maximum_temperature_of_bypass_openning
+        unique_id: b7a30848-cffb-46fd-81a2-db498f4762ff
+        address: 446
+        data_type: float32
+        swap: word
+        precision: 1
+        unit_of_measurement: "°C"
+        device_class: temperature
+      - name: pluggit_number_of_the_active_week_program
+        unique_id: f9975de7-fceb-486b-9fd7-b71b64f6c2e3
+        address: 466
+        data_type: uint32
+        swap: word
+      - name: pluggit_current_unit_mode_raw
+        unique_id: 80eaa703-4c5f-4bca-8075-f60caaa45de8
+        address: 472
+        data_type: uint32
+        swap: word
+#      - name: pluggit_clear_alarm
+#        unique_id: ee5fb6b3-ab62-4e15-a889-d94cb502104b
+#        address: 514
+#        data_type: uint32
+#        swap: word
+      - name: pluggit_active_alarm_raw
+        unique_id: 178fffcc-adc0-4b07-b617-f7a030852814
+        address: 516
+        data_type: uint32
+        swap: word
+      - name: pluggit_reference_extract_fan_speed_for_step3
+        unique_id: 3fc07dc8-951b-4fec-a6e7-76e24308caf3
+        address: 518
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "rpm"
+      - name: pluggit_reference_supply_fan_speed_for_step3
+        unique_id: b787b115-e0e6-445c-a418-86084c3a89dd
+        address: 520
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "rpm"
+      - name: pluggit_fireplace_present_raw
+        unique_id: 682b5d52-5a94-4223-9e62-e5fb9a0e9866
+        address: 540
+        data_type: uint32
+        swap: word
+      - name: pluggit_remaining_time_of_the_filter_lifetime
+        unique_id: 192d5c8b-080f-4500-9967-611e1c98f022
+        address: 554
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "days"
+      - name: pluggit_filter_lifetime
+        unique_id: 6d5285d6-cbba-433a-a612-893b12f09ade
+        address: 556
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "days"
+#      - name: pluggit_reset_a_using_time_of_the_filter
+#        unique_id: 7fce4cc4-438a-4c83-aa8a-04334ffa1e8b
+#        address: 558
+#        data_type: uint32
+#        swap: word
+      - name: pluggit_enable_of_the_night_mode_raw
+        unique_id: d5daaa70-c39b-42ef-b30c-2c105930bfa0
+        address: 560
+        data_type: uint32
+        swap: word
+      - name: pluggit_low_treshold_of_voc
+        unique_id: 1b61c5bf-d512-4e33-b2ee-af96ee9e9be0
+        address: 562
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_middle_treshold_of_voc
+        unique_id: 4394102a-1b0c-4211-87fa-ca79e9363b79
+        address: 564
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_high_treshold_of_voc
+        unique_id: c4162120-6e15-4910-9f9e-986ed1b143c2
+        address: 566
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_low_treshold_of_co2
+        unique_id: 0e0cf09b-f098-4a19-bc93-d56ab797959e
+        address: 568
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_middle_treshold_of_co2
+        unique_id: 25fa536e-f904-42ec-8b3d-a0dbb667e20e
+        address: 570
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_high_treshold_of_co2
+        unique_id: 5b0e2574-4146-406e-afb1-d79c67c465b3
+        address: 572
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_hac1_co2_level
+        unique_id: 3e4635c2-6fbe-44be-bd39-40114b4d4b7d
+        address: 574
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "ppm"
+      - name: pluggit_systemid_components_raw
+        unique_id: bb25a413-9935-4045-8ba2-13dbd03d825e
+        address: 610
+        data_type: uint32
+        swap: word
+      - name: pluggit_work_time_of_system
+        unique_id: ac6ba139-36e5-4b38-8484-b6cedc77724e
+        address: 624
+        data_type: uint32
+        swap: word
+        unit_of_measurement: "hours"
+      - name: pluggit_schedule_of_the_fan_speed_in_monday_of_11_week_program_raw
+        unique_id: 2072d24d-4367-4e3a-8663-0efcb8aaee80
+        address: 626
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_tuesday_of_11_week_program_raw
+        unique_id: 499ff64c-3b26-4563-a77a-b0f1001021fa
+        address: 632
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_wednesday_of_11_week_program_raw
+        unique_id: 33b76fc6-a964-422e-a7e5-2ff4d68ff083
+        address: 638
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_thursday_of_11_week_program_raw
+        unique_id: cc3d2a01-aeb9-403d-bead-40cbf4c053d7
+        address: 644
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_friday_of_11_week_program_raw
+        unique_id: 9e8f4830-2d79-4d0f-a870-5af40636d2c7
+        address: 650
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_saturday_of_11_week_program_raw
+        unique_id: ac2c38bc-7a84-437e-9567-9ca9055c5080
+        address: 656
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_schedule_of_the_fan_speed_in_sunday_of_11_week_program_raw
+        unique_id: 6dc9e17e-88bb-4fcf-8188-1c874fa49fd7
+        address: 662
+        count: 6
+        data_type: custom
+        structure: "12B"
+      - name: pluggit_date_stamp_of_the_system_start_of_exploitation_raw
+        unique_id: 22de4f42-ca4f-4699-b5dc-4ece9a408c34
+        address: 668
+        data_type: uint32
+        swap: word
+
+script:
+  pluggit_set_speed_level_of_fans_in_manual_mode:
+    alias: Set speed level of Fans in Manual mode
+    sequence:
+      - service: modbus.write_register
+        data_template:
+          hub: pluggit
+          address: 324
+          value: [ "{{ speed_level|int }}", 0 ]
+  pluggit_set_active_unit_mode:
+    alias: Set active unit mode
+    sequence:
+      - service: modbus.write_register
+        data_template:
+          hub: pluggit
+          address: 168
+          value: >-
+              {% if unit_mode == 'Auto' %}
+                [0x0002, 0]
+              {% elif unit_mode == 'Manual' %}
+                [0x0004, 0]
+              {% elif unit_mode == 'WeekProgram' %}
+                [0x0008, 0]
+              {% elif unit_mode == 'Away' %}
+                [0x0010, 0]
+              {% elif unit_mode == 'EndAway' %}
+                [0x8010, 0]
+              {% elif unit_mode == 'Fireplace' %}
+                [0x0040, 0]
+              {% elif unit_mode == 'EndFireplace' %}
+                [0x8040, 0]
+              {% elif unit_mode == 'BypassMode' %}
+                [0x0800, 0]
+              {% elif unit_mode == 'EndBypassMode' %}
+                [0x8800, 0]
+              {% endif %}
+
+template:
+  - button:
+    - name: pluggit_reset_a_using_time_of_the_filter
+      unique_id: bcf75120-fb79-496a-998e-c272ca651dd2
+      press:
+      - service: modbus.write_register
+        data_template:
+          hub: pluggit
+          address: 558
+          value: [1, 0]
+  - select:
+    - name: pluggit_speed_level_of_fans_in_manual_mode
+      unique_id: f02f6f61-f631-4865-8370-2c00c898ed62
+      state: "{{ int(states('sensor.pluggit_speed_level_of_fans_in_manual_mode_raw'), 3) }}"
+      options: "{{ [1, 2, 3, 4] }}"
+      select_option:
+        - service: script.pluggit_set_speed_level_of_fans_in_manual_mode
+          data:
+            speed_level: "{{ option }}"
+          target:
+            entity_id: sensor.pluggit_speed_level_of_fans_in_manual_mode_raw
+      availability: "{{ states('sensor.pluggit_speed_level_of_fans_in_manual_mode_raw') is defined }}"
+    - name: pluggit_active_unit_mode
+      unique_id: 07a105b3-9d87-4b97-9c2d-bc6305a09be5
+      state: >
+          {%- set unitModes = {
+            0x0001: 'Installer',
+            0x0002: 'Auto',
+            0x0004: 'Manual',
+            0x0008: 'WeekProgram',
+            0x0010: 'Away',
+            0x0020: 'Night',
+            0x0040: 'Fireplace',
+            0x0080: 'BypassMode',
+            0x0100: 'HAC1Standby',
+            0x0200: 'HAC1FireThermostat',
+            0x0400: 'DefrostOff',
+            0x0800: 'DisplaySummer',
+            0x1000: 'ServoCalibr' } -%}
+          {%- set state = int(states('sensor.pluggit_active_unit_mode_raw'), 0) -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for key in unitModes.keys() -%}
+          {%- if state | bitwise_and(key) == key -%}{%- set data.mode = data.mode + [unitModes[key]] -%}{%- endif -%}
+          {%- endfor -%}
+          {{ data.mode | join(", ") }}
+      options: "{{ ['Auto', 'Manual', 'WeekProgram', 'Away', 'EndAway', 'Fireplace', 'EndFireplace', 'BypassMode', 'EndBypassMode'] }}"
+      select_option:
+        - service: script.pluggit_set_active_unit_mode
+          data:
+            unit_mode: "{{ option }}"
+          target:
+            entity_id: sensor.pluggit_active_unit_mode_raw
+      availability: "{{ states('sensor.pluggit_active_unit_mode_raw') is defined }}"
+  - sensor:
+    - name: pluggit_components
+      unique_id: 66d5258b-c9ec-49ff-9318-f65f3cc23d39
+      state: >
+          {%- set systemComponents = {
+            0x0100: 'FP1',
+            0x0200: 'Week',
+            0x0400: 'Bypass',
+            0x0800: 'LRSwitch',
+            0x1000: 'Internal preheater',
+            0x2000: 'Servo flow',
+            0x4000: 'RH Senser',
+            0x8000: 'VOC sensor',
+            0x0001: 'Ext Override',
+            0x0002: 'HAC1',
+            0x0004: 'HRC2',
+            0x0008: 'PC Tool',
+            0x0010: 'Apps',
+            0x0020: 'ZigBee',
+            0x0040: 'DI1 Override',
+            0x0080: 'DI2 Override' } -%}
+          {%- set state = int(states('sensor.pluggit_components_raw'), 0) -%}
+          {%- set data = namespace(components = []) -%}
+          {%- for key in systemComponents.keys() -%}
+          {%- if state | bitwise_and(key) == key -%}{%- set data.components = data.components + [systemComponents[key]] -%}{%- endif -%}
+          {%- endfor -%}
+          {{ data.components | join(", ") }}
+    - name: pluggit_unit_type
+      unique_id: 3d1e6c7c-78f6-4c76-b971-2cbc21f47ec3
+      state: >
+          {%- set unittypes = {
+            '1': 'AP190',
+            '2': 'AP310',
+            '3': 'AP460',
+            '4': 'DG160',
+            '5': 'DAH190',
+            '6': 'DAH310',
+            '7': 'DAH460',
+            '8': 'DAH160'} -%}
+          {%- set state = states('sensor.pluggit_unit_type_raw') -%}
+          {{ unittypes[state] if state in unittypes else state }}
+    - name: pluggit_ip_address
+      unique_id: 537fa46c-87ee-4c8d-9b3b-5315e1626e66
+      state: >
+        {%- set state = int(states('sensor.pluggit_ip_address_raw'), 0) -%}
+        {{ '{}.{}.{}.{}'.format((state | bitwise_and(0xff000000)) // (0x1000000),
+                                (state | bitwise_and(0xff0000)) // (0x10000),
+                                (state | bitwise_and(0xff00)) // (0x100),
+                                 state | bitwise_and(0xff)) }}
+    - name: pluggit_ip_mask
+      unique_id: 6c7c8bab-c756-4c64-a6d7-7e46dd4dcd4c
+      state: >
+        {%- set state = int(states('sensor.pluggit_ip_mask_raw'), 0) -%}
+        {{ '{}.{}.{}.{}'.format((state | bitwise_and(0xff000000)) // (0x1000000),
+                                (state | bitwise_and(0xff0000)) // (0x10000),
+                                (state | bitwise_and(0xff00)) // (0x100),
+                                 state | bitwise_and(0xff)) }}
+    - name: pluggit_gateway
+      unique_id: 9a6a14a4-fc2e-47e0-b05e-3260ac98fa60
+      state: >
+        {%- set state = int(states('sensor.pluggit_gateway_raw'), 0) -%}
+        {{ '{}.{}.{}.{}'.format((state | bitwise_and(0xff000000)) // (0x1000000),
+                                (state | bitwise_and(0xff0000)) // (0x10000),
+                                (state | bitwise_and(0xff00)) // (0x100),
+                                 state | bitwise_and(0xff)) }}
+    - name: pluggit_mac_address
+      unique_id: 44c2db6c-1922-4348-ab57-11ec8ade127a
+      state: >
+        {%- set state = int(states('sensor.pluggit_mac_address_raw'), 0) -%}
+        {{'{:02X}:{:02X}:{:02X}:{:02X}:{:02X}:{:02X}'.format(
+                                                             (state | bitwise_and(0xff000000000000)) // 0x1000000000000,
+                                                             (state | bitwise_and(0xff00000000000000)) // 0x100000000000000,
+                                                              state | bitwise_and(0xff),
+                                                             (state | bitwise_and(0xff00)) // 0x100,
+                                                             (state | bitwise_and(0xff0000)) // 0x10000,
+                                                             (state | bitwise_and(0xff000000)) // 0x1000000)}}
+    - name: pluggit_bypass_state
+      unique_id: d2e197f0-89ca-49a1-9498-6a4d3217ef2c
+      state: >
+          {%- set bypassActualState = {'0': 'closed', '1': 'in process', '32': 'closing', '64': 'opening', '255': 'opened'} -%}
+          {%- set state = states('sensor.pluggit_bypass_state_raw') -%}
+          {{ bypassActualState[state] if state in bypassActualState else state }}
+      icon: >
+          {%- if is_state("sensor.pluggit_bypass_state_raw", "255") -%}
+            mdi:valve-open
+          {%- elif is_state("sensor.pluggit_bypass_state_raw", "0") -%}
+            mdi:valve-closed
+          {%- else -%}
+            mdi:valve
+          {%- endif -%}
+    - name: pluggit_current_unit_mode
+      unique_id: 0b1b4625-3dee-4a55-98aa-0e484c1142cf
+      state: >
+          {%- set currentBLState = {
+            '0': 'Standby',
+            '1': 'Manual',
+            '2': 'Demand',
+            '3': 'Week program',
+            '4': 'Servo-flow',
+            '5': 'Away',
+            '6': 'Summer',
+            '7': 'DI Override',
+            '8': 'Hygrostat override',
+            '9': 'Fireplace',
+            '10': 'Installer',
+            '11': 'Fail Safe 1',
+            '12': 'Fail Safe 2',
+            '13': 'Fail Off',
+            '14': 'Defrost Off',
+            '15': 'Defrost',
+            '16': 'Night' } -%}
+          {%- set state = states('sensor.pluggit_current_unit_mode_raw') -%}
+          {{ currentBLState[state] if state in currentBLState else state }}
+    - name: pluggit_current_date_time
+      unique_id: 14d08d65-5dad-40f9-8874-323305bdb80f
+      device_class: timestamp
+      state: "{{ int(states('sensor.pluggit_current_date_time_raw'), 0) | as_datetime | as_local }}"
+    - name: pluggit_systemid_components
+      unique_id: 311e82fc-0ea7-4919-98dd-7cdf8eba10d5
+      state: >
+          {%- set systemIDComponents = {'512': 'HAC1'} -%}
+          {%- set state = states('sensor.pluggit_systemid_components_raw') -%}
+          {{ systemIDComponents[state] if state in systemIDComponents else state }}
+    - name: pluggit_schedule_of_the_fan_speed_in_monday_of_11_week_program
+      unique_id: d56d9f4d-f13a-40b0-9426-6ec48323f3ba
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_monday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]] if data.mode | count == 24 else data.mode -%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_tuesday_of_11_week_program
+      unique_id: d3307077-4af5-43eb-a8d8-eb64446b9beb
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_tuesday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]] if data.mode | count == 24 else data.mode -%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_wednesday_of_11_week_program
+      unique_id: f039802d-e2f1-4a5c-86f6-894f94d9f36f
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_wednesday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]]  if data.mode | count == 24 else data.mode-%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_thursday_of_11_week_program
+      unique_id: c0a0f88d-b3b5-4c10-b964-4d1da96e6304
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_thursday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]]  if data.mode | count == 24 else data.mode-%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_friday_of_11_week_program
+      unique_id: cc483a8b-884e-46a2-891a-18dc28cf9917
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_friday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]] if data.mode | count == 24 else data.mode -%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_saturday_of_11_week_program
+      unique_id: 3292b58c-6e4a-4c26-b196-45342a06cea2
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_saturday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]] if data.mode | count == 24 else data.mode -%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_schedule_of_the_fan_speed_in_sunday_of_11_week_program
+      unique_id: 839a77bd-d634-46ce-9bb6-f7651926f43e
+      state: >
+          {%- set fanSpeedCodes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: 'A'} -%}
+          {%- set state = states('sensor.pluggit_schedule_of_the_fan_speed_in_sunday_of_11_week_program_raw') -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for c in state.split(',') -%}
+          {%-   set c1 = (int(c, 0xff) | bitwise_and(0xf0)) // 0x10 -%}
+          {%-   set c2 = int(c, 0xff) | bitwise_and(0x0f) -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c1] if c1 in fanSpeedCodes else '?'] -%}
+          {%-   set data.mode = data.mode + [fanSpeedCodes[c2] if c2 in fanSpeedCodes else '?'] -%}
+          {%- endfor -%}
+          {%- set data.mode = [data.mode[5],  data.mode[4],  data.mode[7],  data.mode[6],  
+                               data.mode[1],  data.mode[0],  data.mode[3],  data.mode[2],  
+                               data.mode[13], data.mode[12], data.mode[15], data.mode[14], 
+                               data.mode[9],  data.mode[8],  data.mode[11], data.mode[10], 
+                               data.mode[21], data.mode[20], data.mode[23], data.mode[22], 
+                               data.mode[17], data.mode[16], data.mode[19], data.mode[18]] if data.mode | count == 24 else data.mode -%}
+          {{ data.mode | join(" ") }}
+    - name: pluggit_fw_version
+      unique_id: 3718c40d-701e-4954-9b76-89770a4862cc
+      state: >
+          {%- set state = int(states('sensor.pluggit_fw_version_raw'), 0) -%}
+          {{ '{}.{}'.format((state | bitwise_and(0xff00)) // (0x100), state | bitwise_and(0xff)) }}
+    - name: pluggit_hac1_fw_version
+      unique_id: 06a39b9c-2375-47d4-855d-a6ace549b96d
+      state: >
+          {%- set state = int(states('sensor.pluggit_hac1_fw_version_raw'), 0) -%}
+          {{ '{}.{}'.format((state | bitwise_and(0xff00)) // (0x100), state | bitwise_and(0xff)) }}
+    - name: pluggit_preheater_power_state
+      unique_id: 69ca1c3e-a09e-4e98-a632-6830347d9dd4
+      state: >
+          {%- set halPreheater = {'1': 'On', '0': 'Off'} -%}
+          {%- set state = states('sensor.pluggit_preheater_power_state_raw') -%}
+          {{ halPreheater[state] if state in halPreheater else state }}
+    - name: pluggit_list_of_the_hac1_active_components
+      unique_id: a82bf83c-a666-4c11-9487-768457e42a51
+      state: >
+          {%- set hac1Components = {
+            0x0001: 'CO2 Sensor',
+            0x0002: 'Bypass',
+            0x0004: 'PreHeater',
+            0x0008: 'PreCooler',
+            0x0010: 'AfterHeater',
+            0x0020: 'AfterCooler',
+            0x0040: 'Hygrostat' } -%}
+          {%- set state = int(states('sensor.pluggit_list_of_the_hac1_active_components_raw'), 0) -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for key in hac1Components.keys() -%}
+          {%- if state | bitwise_and(key) == key -%}{%- set data.mode = data.mode + [hac1Components[key]] -%}{%- endif -%}
+          {%- endfor -%}
+          {{ data.mode | join(", ") }}
+    - name: pluggit_list_of_the_hac1_enabled_components
+      unique_id: 306b7b40-cd57-4e37-966d-763c5c096404
+      state: >
+          {%- set hac1Components = {
+            0x0001: 'CO2 Sensor',
+            0x0002: 'Bypass',
+            0x0004: 'PreHeater',
+            0x0008: 'PreCooler',
+            0x0010: 'AfterHeater',
+            0x0020: 'AfterCooler',
+            0x0040: 'Hygrostat' } -%}
+          {%- set state = int(states('sensor.pluggit_list_of_the_hac1_enabled_components_raw'), 0) -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for key in hac1Components.keys() -%}
+          {%- if state | bitwise_and(key) == key -%}{%- set data.mode = data.mode + [hac1Components[key]] -%}{%- endif -%}
+          {%- endfor -%}
+          {{ data.mode | join(", ") }}
+    - name: pluggit_list_of_the_hac1_components
+      unique_id: cccda7d2-7605-4646-a847-a698a71e8d1c
+      state: >
+          {%- set hac1Components = {
+            0x0001: 'CO2 Sensor',
+            0x0002: 'Bypass',
+            0x0004: 'PreHeater',
+            0x0008: 'PreCooler',
+            0x0010: 'AfterHeater',
+            0x0020: 'AfterCooler',
+            0x0040: 'Hygrostat' } -%}
+          {%- set state = int(states('sensor.pluggit_list_of_the_hac1_components_raw'), 0) -%}
+          {%- set data = namespace(mode = []) -%}
+          {%- for key in hac1Components.keys() -%}
+          {%- if state | bitwise_and(key) == key -%}{%- set data.mode = data.mode + [hac1Components[key]] -%}{%- endif -%}
+          {%- endfor -%}
+          {{ data.mode | join(", ") }}
+    - name: pluggit_active_alarm
+      unique_id: 3aeeb340-68e2-4f8e-ba68-3f7f585be1be
+      state: >
+          {%- set alarmNum = {
+            '0': 'No Alarms',
+            '1': 'Exhaust FAN Alarm',
+            '2': 'Supply FAN Alarm',
+            '3': 'Bypass Alarm',
+            '4': 'T1 Alarm',
+            '5': 'T2 Alarm',
+            '6': 'T3 Alarm',
+            '7': 'T4 Alarm',
+            '8': 'T5 Alarm',
+            '9': 'RH Alarm',
+            '10': 'Outdoor13 Alarm',
+            '11': 'Supply5 Alarm',
+            '12': 'Fire Alarm',
+            '13': 'Communication Alarm',
+            '14': 'FireTermostat Alarm',
+            '15': 'VOC Alarm' } -%}
+          {%- set state = states('sensor.pluggit_active_alarm_raw') -%}
+          {{ alarmNum[state] if state in alarmNum else state }}
+    - name: pluggit_fireplace_present
+      unique_id: e143fb90-e232-4df3-a77f-a0aa5b8c9a83
+      state: >
+          {%- set fireplace = {'0': 'Fireplace not present (Unbalanced defrost allowed)',
+                               '1': 'Fireplace present (Unbalanced defrost not allowed)'} -%}
+          {%- set state = states('sensor.pluggit_fireplace_present_raw') -%}
+          {{ fireplace[state] if state in fireplace else state }}
+    - name: pluggit_enable_of_the_night_mode
+      unique_id: fa9e1ead-233c-4ee5-b96c-0b80a8f2cccf
+      state: >
+          {%- set nightModeEnable = {'0': 'disabled', '1': 'enabled'} -%}
+          {%- set state = states('sensor.pluggit_enable_of_the_night_mode_raw') -%}
+          {{ nightModeEnable[state] if state in nightModeEnable else state }}
+    - name: pluggit_date_stamp_of_the_system_start_of_exploitation
+      unique_id: 4f2d90fc-65e2-413f-acf8-bc2ef3b7639a
+      device_class: timestamp
+      state: "{{ int(states('sensor.pluggit_date_stamp_of_the_system_start_of_exploitation_raw'), 0) | as_datetime | as_local }}"
+
+homeassistant:
+  customize:
+    button.pluggit_reset_a_using_time_of_the_filter:
+      friendly_name: 'Reset a using time of the Filter'
+      icon: mdi:air-filter
+    select.pluggit_speed_level_of_fans_in_manual_mode:
+      friendly_name: 'Speed level of Fans in Manual mode'
+      icon: mdi:fan
+    select.pluggit_active_unit_mode:
+      friendly_name: 'Active Unit mode'
+      icon: mdi:land-plots-circle
+    sensor.pluggit_components_raw:
+      friendly_name: 'Components (Raw)'
+    sensor.pluggit_unit_type_raw:
+      friendly_name: 'Unit type (Raw)'
+    sensor.pluggit_system_serial_number:
+      friendly_name: 'System serial number'
+    sensor.pluggit_system_name:
+      friendly_name: 'System name'
+    sensor.pluggit_fw_version_raw:
+      friendly_name: 'FW version (Raw)'
+    sensor.pluggit_dhcp_enable:
+      friendly_name: 'DHCP enable'
+    sensor.pluggit_ip_address_raw:
+      friendly_name: 'IP address (Raw)'
+    sensor.pluggit_ip_mask_raw:
+      friendly_name: 'IP mask (Raw)'
+    sensor.pluggit_gateway_raw:
+      friendly_name: 'Gateway (Raw)'
+    sensor.pluggit_mac_address_raw:
+      friendly_name: 'MAC Address (Raw)'
+    sensor.pluggit_preheater_power_state_raw:
+      friendly_name: 'Preheater power state (Raw)'
+    sensor.pluggit_switch_in_b_position:
+      friendly_name: 'switch in “B position”'
+      icon: mdi:dip-switch
+    sensor.pluggit_switch_in_a_position:
+      friendly_name: 'switch in “A position”'
+      icon: mdi:dip-switch
+    sensor.pluggit_fan1:
+      friendly_name: 'Fan1'
+      icon: mdi:fan
+    sensor.pluggit_fan2:
+      friendly_name: 'Fan2'
+      icon: mdi:fan
+    sensor.pluggit_current_date_time_raw:
+      friendly_name: 'Current Date/time (Raw)'
+    sensor.pluggit_new_date_time:
+      friendly_name: 'New date/time'
+    sensor.pluggit_t1:
+      friendly_name: 'Outdoor temperature T1'
+    sensor.pluggit_t2:
+      friendly_name: 'Supply temperature T2'
+    sensor.pluggit_t3:
+      friendly_name: 'Extract temperature T3'
+    sensor.pluggit_t4:
+      friendly_name: 'Exhaust temperature T4'
+    sensor.pluggit_t5:
+      friendly_name: 'Room temperature wireless remote T5'
+    sensor.pluggit_power_of_preheater:
+      friendly_name: 'Power of Preheater'
+    sensor.pluggit_active_unit_mode_raw:
+      friendly_name: 'Active Unit mode (Raw)'
+    sensor.pluggit_hac1_fw_version_raw:
+      friendly_name: 'HAC1 FW Version (Raw)'
+    sensor.pluggit_period_of_the_air_filter_using:
+      friendly_name: 'Period of the Air Filter using'
+      icon: mdi:progress-clock
+    sensor.pluggit_value_of_rh_sensor:
+      friendly_name: 'Value of RH sensor'
+      icon: mdi:water-percent
+    sensor.pluggit_bypass_state_raw:
+      friendly_name: 'Bypass state (Raw)'
+    sensor.pluggit_list_of_the_hac1_components_raw:
+      friendly_name: 'List of the HAC1 components (Raw)'
+    sensor.pluggit_manual_bypass_duration:
+      friendly_name: 'Manual bypass duration'
+      icon: mdi:progress-clock
+    sensor.pluggit_list_of_the_hac1_active_components_raw:
+      friendly_name: 'List of the HAC1 active components (Raw)'
+    sensor.pluggit_speed_level_of_fans_in_manual_mode_raw:
+      friendly_name: 'Speed level of Fans in Manual mode (Raw)'
+    sensor.pluggit_night_mode_start_hour:
+      friendly_name: 'Night mode start hour'
+    sensor.pluggit_night_mode_start_minute:
+      friendly_name: 'Night mode start minute'
+    sensor.pluggit_night_mode_end_hour:
+      friendly_name: 'Night mode end hour'
+    sensor.pluggit_night_mode_end_minute:
+      friendly_name: 'Night mode end minute'
+    sensor.pluggit_setpoint_of_rh:
+      friendly_name: 'Setpoint of RH'
+      icon: mdi:water-percent
+    sensor.pluggit_setpoint_of_the_t2:
+      friendly_name: 'Setpoint of the T2'
+    sensor.pluggit_setpoint_of_the_t3:
+      friendly_name: 'Setpoint of the T3'
+    sensor.pluggit_setpoint_of_the_t5:
+      friendly_name: 'Setpoint of the T5'
+    sensor.pluggit_list_of_the_hac1_enabled_components_raw:
+      friendly_name: 'List of the HAC1 enabled components (Raw)'
+    sensor.pluggit_voc_sensor_value:
+      friendly_name: 'VOC sensor value'
+      icon: mdi:molecule
+    sensor.pluggit_minimum_temperature_of_bypass_openning:
+      friendly_name: 'Minimum temperature of Bypass openning'
+    sensor.pluggit_maximum_temperature_of_bypass_openning:
+      friendly_name: 'Maximum temperature of Bypass openning'
+    sensor.pluggit_number_of_the_active_week_program:
+      friendly_name: 'Number of the Active Week Program'
+    sensor.pluggit_current_unit_mode_raw:
+      friendly_name: 'Current unit mode (Raw)'
+    sensor.pluggit_clear_alarm:
+      friendly_name: 'Clear Alarm'
+    sensor.pluggit_active_alarm_raw:
+      friendly_name: 'Active Alarm (Raw)'
+    sensor.pluggit_reference_extract_fan_speed_for_step3:
+      friendly_name: 'Reference Extract Fan Speed for Step3'
+      icon: mdi:fan
+    sensor.pluggit_reference_supply_fan_speed_for_step3:
+      friendly_name: 'Reference Supply Fan Speed for Step3'
+      icon: mdi:fan
+    sensor.pluggit_fireplace_present_raw:
+      friendly_name: 'Fireplace present (Raw)'
+    sensor.pluggit_remaining_time_of_the_filter_lifetime:
+      friendly_name: 'Remaining time of the Filter Lifetime'
+      icon: mdi:progress-clock
+    sensor.pluggit_filter_lifetime:
+      friendly_name: 'Filter Lifetime'
+      icon: mdi:progress-clock
+    sensor.pluggit_enable_of_the_night_mode_raw:
+      friendly_name: 'Enable of the Night Mode (Raw)'
+    sensor.pluggit_low_treshold_of_voc:
+      friendly_name: 'Low Treshold of VOC'
+      icon: mdi:molecule
+    sensor.pluggit_middle_treshold_of_voc:
+      friendly_name: 'Middle Treshold of VOC'
+      icon: mdi:molecule
+    sensor.pluggit_high_treshold_of_voc:
+      friendly_name: 'High Treshold of VOC'
+      icon: mdi:molecule
+    sensor.pluggit_low_treshold_of_co2:
+      friendly_name: 'Low Treshold of CO2'
+      icon: mdi:molecule-co2
+    sensor.pluggit_middle_treshold_of_co2:
+      friendly_name: 'Middle Treshold of CO2'
+      icon: mdi:molecule-co2
+    sensor.pluggit_high_treshold_of_co2:
+      friendly_name: 'High Treshold of CO2'
+      icon: mdi:molecule-co2
+    sensor.pluggit_hac1_co2_level:
+      friendly_name: 'HAC1 CO2 Level'
+      icon: mdi:molecule-co2
+    sensor.pluggit_systemid_components_raw:
+      friendly_name: 'SystemID Components (Raw)'
+    sensor.pluggit_work_time_of_system:
+      friendly_name: 'Work time of system'
+      icon: mdi:progress-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_monday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Monday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_tuesday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Tuesday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_wednesday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Wednesday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_thursday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Thursday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_friday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Friday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_saturday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Saturday of 11 Week Program (Raw)'
+    sensor.pluggit_schedule_of_the_fan_speed_in_sunday_of_11_week_program_raw:
+      friendly_name: 'Schedule of the Fan Speed in Sunday of 11 Week Program (Raw)'
+    sensor.pluggit_date_stamp_of_the_system_start_of_exploitation_raw:
+      friendly_name: 'Date Stamp of the system start of Exploitation (Raw)'
+    sensor.pluggit_components:
+      friendly_name: 'Components'
+    sensor.pluggit_unit_type:
+      friendly_name: 'Unit type'
+      icon: mdi:hvac
+    sensor.pluggit_fw_version:
+      friendly_name: 'FW version'
+      icon: mdi:text-box-multiple-outline
+    sensor.pluggit_ip_address:
+      friendly_name: 'IP address'
+      icon: mdi:ip-network
+    sensor.pluggit_ip_mask:
+      friendly_name: 'IP mask'
+      icon: mdi:ip-network
+    sensor.pluggit_gateway:
+      friendly_name: 'Gateway'
+      icon: mdi:ip-network
+    sensor.pluggit_mac_address:
+      friendly_name: 'MAC Address'
+      icon: mdi:ip-network
+    sensor.pluggit_hac1_fw_version:
+      friendly_name: 'HAC1 FW Version'
+      icon: mdi:text-box-multiple-outline
+    sensor.pluggit_bypass_state:
+      friendly_name: 'Bypass state'
+    sensor.pluggit_current_unit_mode:
+      friendly_name: 'Current unit mode'
+      icon: mdi:land-plots-circle
+    sensor.pluggit_current_date_time:
+      friendly_name: 'Current Date/time'
+    sensor.pluggit_systemid_components:
+      friendly_name: 'SystemID Components'
+    sensor.pluggit_schedule_of_the_fan_speed_in_monday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Monday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_tuesday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Tuesday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_wednesday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Wednesday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_thursday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Thursday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_friday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Friday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_saturday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Saturday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_schedule_of_the_fan_speed_in_sunday_of_11_week_program:
+      friendly_name: 'Schedule of the Fan Speed in Sunday of 11 Week Program'
+      icon: mdi:fan-clock
+    sensor.pluggit_preheater_power_state:
+      friendly_name: 'Preheater power state'
+    sensor.pluggit_list_of_the_hac1_active_components:
+      friendly_name: 'List of the HAC1 active components'
+    sensor.pluggit_list_of_the_hac1_enabled_components:
+      friendly_name: 'List of the HAC1 enabled components'
+    sensor.pluggit_list_of_the_hac1_components:
+      friendly_name: 'List of the HAC1 components'
+    sensor.pluggit_active_alarm:
+      friendly_name: 'Active Alarm'
+      icon: mdi:alarm-light-outline
+    sensor.pluggit_fireplace_present:
+      friendly_name: 'Fireplace present'
+      icon: mdi:fireplace
+    sensor.pluggit_enable_of_the_night_mode:
+      friendly_name: 'Enable of the Night Mode'
+      icon: mdi:shield-moon
+    sensor.pluggit_date_stamp_of_the_system_start_of_exploitation:
+      friendly_name: 'Date Stamp of the system start of Exploitation'
