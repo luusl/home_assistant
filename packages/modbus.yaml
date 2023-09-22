@@ -64,12 +64,10 @@ modbus:
         unique_id: 1b9794d6-a52a-4bf4-aeae-0538cda51c59
         address: 84
         data_type: uint16
-        swap: word
       - name: pluggit_switch_in_a_position
         unique_id: a299be7f-b341-402b-9b7f-d4bbb06604bd
         address: 86
         data_type: uint16
-        swap: word
       - name: pluggit_fan1
         unique_id: 269560eb-15de-48ca-a464-8f1fdb01d6dc
         address: 100
@@ -471,7 +469,7 @@ template:
     - name: pluggit_speed_level_of_fans_in_manual_mode
       unique_id: f02f6f61-f631-4865-8370-2c00c898ed62
       state: "{{ int(states('sensor.pluggit_speed_level_of_fans_in_manual_mode_raw'), 3) }}"
-      options: "{{ [1, 2, 3, 4] }}"
+      options: "{{ [0, 1, 2, 3, 4] }}"
       select_option:
         - service: script.pluggit_set_speed_level_of_fans_in_manual_mode
           data:
