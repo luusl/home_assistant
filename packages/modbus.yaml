@@ -19,12 +19,11 @@ modbus:
         address: 4
         data_type: uint64
         swap: word
-      - name: pluggit_system_name
-        unique_id: a99fcbc3-6a2a-460e-bbaa-b5a014355f68
+      - name: pluggit_system_name_raw
+        unique_id: a4ad9721-c823-4010-be8d-45f0704a9d20
         address: 8
         count: 16
         data_type: string
-        swap: byte
       - name: pluggit_fw_version_raw
         unique_id: 4cd05099-b0fd-4b59-b169-2d7adac04e5a
         address: 24
@@ -509,6 +508,15 @@ template:
             entity_id: sensor.pluggit_active_unit_mode_raw
       availability: "{{ states('sensor.pluggit_active_unit_mode_raw') is defined }}"
   - sensor:
+    - name: pluggit_system_name
+      unique_id: f5fd9344-2710-42b1-84be-250f352918bb
+      state: >
+          {%- set state = states('sensor.pluggit_system_name_raw') -%}
+          {%- set data = namespace(name = "") -%}
+          {%- for x in range(0, state | length, 2) -%}
+          {%-   set data.name = data.name + state[x:x+2][::-1] -%}
+          {%- endfor -%}
+          {{ data.name | join('') }}
     - name: pluggit_components
       unique_id: 66d5258b-c9ec-49ff-9318-f65f3cc23d39
       state: >
@@ -888,8 +896,8 @@ homeassistant:
       friendly_name: 'Unit type (Raw)'
     sensor.pluggit_system_serial_number:
       friendly_name: 'System serial number'
-    sensor.pluggit_system_name:
-      friendly_name: 'System name'
+    sensor.pluggit_system_name_raw:
+      friendly_name: 'System name (Raw)'
     sensor.pluggit_fw_version_raw:
       friendly_name: 'FW version (Raw)'
     sensor.pluggit_dhcp_enable:
@@ -904,6 +912,8 @@ homeassistant:
       friendly_name: 'MAC Address (Raw)'
     sensor.pluggit_preheater_power_state_raw:
       friendly_name: 'Preheater power state (Raw)'
+    sensor.pluggit_system_name:
+      friendly_name: 'System name'
     sensor.pluggit_switch_in_b_position:
       friendly_name: 'switch in “B position”'
       icon: mdi:dip-switch
